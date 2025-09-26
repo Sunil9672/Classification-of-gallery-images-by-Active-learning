@@ -1,0 +1,1511 @@
+1. Difference between ArrayList and HashSet in Java? 
+	-ArrayList implements List interface while HashSet implements Set interface in Java.
+	-Internally, ArrayList is backed by an Array while HashSet is backed by an HashMap.
+	-ArrayList allows duplicate values while HashSet doesn’t allow duplicates values.
+	-ArrayList maintains the order of the object in which they are inserted while HashSet is an unordered collection and doesn’t maintain any order.
+	-ArrayList is index based we can retrieve object by calling get(index) method or remove objects by calling remove(index) method while HashSet
+	 is completely object based. HashSet does not provide get() method.
+	-ArrayList not apply any restriction, we can add any number of null value while HashSet allow one null value.
+	
+
+2. Array vs ArrayList??
+	Array:-
+		-Static in size
+		-can store primitive and object
+		-performance is fast
+		-it is mandatory to specify size while declare array
+		-array can be multidimensional
+	ArrayList:-
+		-Dynamic in size
+		-cannot store primitive type
+		-Internally it uses array itself.
+		-performance is slow only in the case of resize, means arraylist is dynamic in nature but when its threshold is full then it 
+			resize itself and copy old array into new arraylist hence it take some time.
+		-default capacity of arraylist is 10
+		-it is not mandatory to specify size while declaring arraylist, it creates arraylist with default size of 10.
+		-araylist always single dimensional
+
+3.ArrayList vs Vector
+	ArrayList and Vector both implements List interface and maintains insertion order.
+
+	ArrayList:-(default capacity of 10 ele)
+		-It is not synchronized
+		-Not thread safe
+		-As it is not thread safe means multiple thread can access it simultanioyusly hence faster tham vector
+		-array list increments its size with 50%. means once it full with initial capacity of 10 element then while adding 11th ele new arrayliust
+		 size will become 15.
+		-maintains insertion order
+		
+			e.g:- ArrayList<Integer> al=new ArrayList<Integer>();
+					al.add(100);
+	Vector:-(default capacity of 10 ele)
+		-It is synchronized
+		-thread safe
+		-As it is thread safe only one thread can access it at a time hence slower than arraylist
+		-vector increments with 100%of its initail size.
+		-maintain insertion order
+			e.g.:- Vector<String> vs=new Vector<String>();
+					vs.add("Hii");
+
+4.ArrayList vs LinkedList??
+
+	Arraylist:-	(No thread Safe)
+		-It internally uses, dynmic array to store elements
+		-Arraylist implements only list interface
+		-manupulation of element means adding and removing of element is slower than linkedlist as it requires bit shifting
+		-random access is allow hence accessing element is faster than linkedlist
+		-arraylist have initial default capacity of 10 element
+	LinkedList:- (No thread Safe)
+		-It internally uses doubly linked list to store elements
+		-It imeplements Queue and List interface
+		-there is no bit shifting required hence manupulation of element is easy and faster in linkedlist than arraylist.
+		-no random access is here hence slower in accessing element than arraylist
+		-There is no any initailal default capacity, whenevr linkedlist is created it is get created with empty list.
+
+2. When to use the volatile variable in Java?
+	The volatile keyword in Java is used to indicate that a variable's value can be modified by different threads. Used with the syntax, volatile 
+	dataType variableName = x; It ensures that changes made to a volatile variable by one thread are immediately visible to other threads.Volatile
+	Keyword cannot be used with classes or methods.It is only used with variables.
+	
+3. What is the difference between transient and volatile variables in Java?
+	Transient variables help in excluding specific fields from being serialization, ensuring sensitive or non-serializable data remains private. 
+      On the other hand, volatile variables ensure that all threads access the most up-to-date value, preventing any inconsistencies caused by caching or optimization.
+
+4. When to use a transient variable in Java
+	 The transient keyword in Java can be used by the programmer to avoid serialization.
+
+5. What is Serialization and Deserialization?
+	Serialization: When we want to store an object into file/memory/databse we cannot store it directly, for that first we need to convert it into byte 
+	stream and then that byte stream we can store where we want like in file/memory. The process of converting an object into byte stream is known as Serialization.
+	
+	Deserialization: The process of converting byte stream back into an object form is known as Deserialization.
+	
+6. Difference between Hashtable and HashMap in Java?
+	HashMap:-
+		Java HashMap contains values based on the key.
+		Java HashMap contains only unique keys.
+		HashMap is not synchronized and can't be accessed by multiple threads without additional synchronization code. 
+		Java HashMap may have one null key and multiple null values.
+		Java HashMap does not maintains order.
+		The initial default capacity of Java HashMap class is 16 with a load factor of 0.75 and increases it by 100 precent.
+	HashTable:-
+		Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+		Hashtable is thread-safe and can be shared between multiple threads in the application.
+		Hashtable doesn't allow any null key or value.
+		HashTable does not maintain insertion order.
+
+7. Difference between List and Set in Java?
+	List:-
+		The list implementation allows us to add the same or duplicate elements.
+		The insertion order is maintained by the List.
+		List allows us to add any number of null values.
+		The List implementation classes are LinkedList and ArrayList.
+		We can get the element of a specified index from the list using the get() method.
+		
+	Set:-
+		The set implementation doesn't allow us to add the same or duplicate elements.
+		It doesn't maintain the insertion order of elements.
+		Set allows us to add at most one null value in it.
+		The Set implementation classes are TreeSet, HashSet and LinkedHashSet.
+		We cannot find the element from the Set based on the index because it doesn't provide any get method().
+
+8. Java Class Loader?
+	The Java ClassLoader is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine.The Java run time 
+	system does not need to know about files and file systems because of classloaders. Java classes aren’t loaded into memory all at once, but when 
+	required by an application. At this point, the Java ClassLoader is called by the JRE and these ClassLoaders load classes into memory dynamically.
+
+9. JDK vs JRE vs JVM
+	JVM(Java Virtual Machine) 
+	JVM is an abstract machine that enables Java programs to be executed on any device without modification. It is responsible for running Java bytecode.
+	Key Features:
+	Converts Java bytecode into machine code for execution.
+	Manages memory (Garbage Collection).
+	Provides features like security and platform independence.
+    JVM is platform-dependent, so Java is platform-independent because of JVM.
+	
+	JRE: The Java Runtime Environment is a set of software tools which are used for developing Java applications. 
+	It is used to provide the runtime environment. 
+	JRE is a package that contains everything needed to run a Java application, 
+	but it does not include development tools like a compiler or debugger.
+	Components:
+	JVM (to execute Java programs).
+	Java Libraries (APIs) like Collections, IO, Networking, etc.
+	Java class files (standard Java libraries).
+	If you only want to run Java programs, you only need JRE, not JDK.
+	
+	JDK:JDK is a complete development environment that includes everything in JRE plus development tools (compiler, debugger, etc.).
+	Components: JRE (which includes JVM).
+				Java Compiler (javac) – Converts Java source code into bytecode.
+				Development tools (Debugger, Documentation Generator, etc.).
+    If you want to develop and run Java applications, you need JDK.
+	
+9. Types of Memory Areas in JVM?
+	JVM is divided into five different parts namely− 
+	Method area− The method area stores the class code − code of the variables and methods. 
+	Heap − The Java objects are created in this area. 
+	Java Stack− While running methods the results are stored in the stack memory. 
+	PC registers− These contain the address of the instructions of the methods. 
+	Native method stacks− Similar to Java stack, native methods are executed on the Native method stacks.
+	
+10. SOLID Princile in Java? Why should we use SOLID principles?
+	Many time we need to  do modify our application for adding new feature, and for fixing some issue. So while doing all this this it is most important 
+	that existing functionality never get break. SOLID principle helps us to do this. It reduces the dependencies so we can modify one part of code without 
+	affecting the other part. Also Using solid principles it is easier to maintain,extends and understand the code.
+
+	It reduces the dependencies so that a block of code can be changed without affecting the other code blocks.
+	The principles intended to make design easier, understandable. By using the principles, the system is maintainable, testable, scalable, and reusable.
+	
+	Advantages:-
+		-Avoid Duplicate code
+		-Easy to maintain
+		-Easy to understand
+		-Flexible software
+		-Reduce complexity
+
+	1.Single Responsibility Principle:-
+		-It means one class should have only one responsibility means we should write ,change and maitain class for only one purpose.
+			Example:- if we have Employee class and we want to change state of employee and if we do not make seperate class for employee and Address then for
+			 any change related to address need to modify whole employee class.Hence instead create Employee and Address class seperately and use address 
+				class reference in employe so when need any change related to Address class will not affect on Employee class.
+			
+		- If classes are not according to SRP. then it creates more dependency which make problem when requirement came for making changes also it is 
+			dificult and maintaing also.
+		- For keeping seperate classes for separate responsibility it is easier to understand and maintain.
+		
+		e.g:- instead doing address and employe class in one class make it seperately.
+		
+		class address{
+			private String city;
+			private int pin;
+		}
+		
+		class Employee{
+			private int id;
+			private String name;
+			Address address;
+		}
+		
+	2.Open Closed Principle:-
+		-It means software component should be open for extension and closed for modification.
+		-it means we can extend class and include extra functionality without modifing and affecting exisiting privious functionality.
+		-it is required bcz, if while adding new functionality if any changes happens from your side existing functionality get breaks.
+		-Software entities (classes, modules, functions) should be open for extension but closed for modification. This means you can extend a class's 
+		behavior without modifying it.
+		e.g:-
+		
+		Suppose we have a Shape class for calculating the area of different shapes.
+
+		class Shape {
+    			public double calculateArea() {
+        				// Shape calculation logic
+       				 return 0;
+    			}
+		}
+
+		If we want to add new shapes, we'd need to modify this class, It means It does not follow Open Closed Principle.
+		Instead, Instead, we can create a base class/interface and extend it for each new shape.
+
+		interface Shape {
+    			double calculateArea();
+		}
+
+		class Circle implements Shape {
+   			 private double radius;
+
+    			public Circle(double radius) {
+        				this.radius = radius;
+    			}
+
+    			public double calculateArea() {
+      				  return Math.PI * radius * radius;
+    			}
+		}
+
+		class Rectangle implements Shape {
+ 			   private double width, height;
+
+    			public Rectangle(double width, double height) {
+        				this.width = width;
+        				this.height = height;
+    			}
+
+    			public double calculateArea() {
+       			 	return width * height;
+   			 }
+		}
+
+
+	3.Lisko Substitution Principle:-
+		-It states that Derived type must be completely substitutable in their base class.
+		-it means the classes which we are created by extending privious class that completely fit in our application.
+		
+		-The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application.
+		 That requires the objects of your subclasses to behave in the same way as the objects of your superclass. 
+		
+		e.g :- conside above example in openclose principle, we have created new class tarinedEmp that extending Employee class which is priviously created.
+		
+		public class Execution {
+
+			public static void main(String a[])
+			{
+				Employee emp=new Employee(1,"Mahesh",25);
+				//emp.printEmp();
+				
+				trainedEmp te=new trainedEmp(2, "Mayur", 24, "Pune");
+				//te.printEmp();
+				
+				Execution exe=new Execution();
+				exe.newPrint(emp);
+				
+				Execution exe=new Execution();  //derived type must  be completely substitutable for base class
+				exe.newPrint(te);
+			}
+			
+			public void newPrint(Employee e)
+			{
+				e.printEmp();
+			}
+		} 
+		
+	4.Interface Segregation Principle:-
+		It is similar to Single responsibility principle differenece is SRP is related to classes and ISP is related to Interface.
+		
+		if we declare all our method for all task in one inyterface then if client implement that interface then it get forced to define 
+		all method which he dont want to define such method also forcefully he need to define. To avovide it we need to folly ISP which 
+		tells specify seperate interface for seperate task.
+		
+	5.Dependency Inversion Principle:-
+		It simply means avoid tight coupling, by Autowiring. in Spring Dependency ingection is based on DIP.
+
+11. Dfference between String vs String Builder vs String Buffer
+	String - It is a class which is Immutable, means once we can create string and initialize it, we cannot modify it, we can just change the reference
+	 	of it but we cannot change the actual content.
+	
+	String Builder :- It is a mutable class used for making string mutable. StringBuilder is non-synchronized i.e. not thread safe. It means two threads
+	 	can call the methods of StringBuilder simultaneously. Hence it is faster than String Buffer.
+	
+	String Buffer :- It is mutable class, used for making string mutable. StringBuffer is synchronized i.e. thread safe. It means two threads cannot
+	 	call the methods of StringBuffer simultaneously. Hence it is slower than String Builder.
+
+12. Can we write custom immutable class?
+	YES,
+	There are many immutable classes like String, Boolean, Byte, Short, Integer, Long, Float, Double etc. In short, all the wrapper classes and String 
+	class is immutable.
+	-Declare the class as final so it can't be extended.
+	-provide only getters so no option for change value.
+	-Data members in the class must be declared private so that direct access is not allowed.
+	-Data members in the class must be declared as final so that we can’t change the value of it after object creation.
+	-A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
+	
+	Example:- 
+	
+	final class A{
+	
+		private final String a;
+		
+		public A(String a)
+		{
+			this.a = a;
+		}
+		
+		public String getName()
+		{
+			return this.a;
+		}
+	}
+
+13. Why String is immutable?
+	
+	a. Security
+		String is widely used for storing passwords, usernames, URLs, and keys.
+		If String were mutable, an attacker could modify sensitive data, causing security vulnerabilities.
+		
+	b. String Pool Optimization (Memory Efficiency)
+		Java internally stores strings in a "String Pool" to save memory.
+		If String were mutable, changing one string would affect all references, breaking the program.
+		
+	c. Thread-Safety
+		Since String objects cannot be changed, multiple threads can use the same String without synchronization.
+		This improves performance in multi-threaded environments.
+
+	
+14.Singleton class?
+	Singleton Class:
+		singleton class is a class that can have only one object (an instance of the class) at a time.
+		Using a singleton class in Java is suitable when you require exactly one instance of a class throughout your program's lifecycle.
+		The singleton pattern offers a straightforward way to manage shared resources in your application.
+
+	There are two very common forms of implementing the Singleton design pattern in Java, and these are 
+	- Early Instantiation 
+		In this method, the singleton instance is created at the time of class loading, and it is stored as a private static field. 
+	-Lazy Instantiation
+		In this method, the singleton instance is created only when it is first accessed.
+	
+	Advantages Of Singleton Design Pattern:
+		Resource Management: Singleton ensures efficient resource management by having only one instance of the class. 
+		Global Access: It provides a global access point, allowing other classes to interact with the Singleton instance easily.
+
+	Steps to create singleton class:
+		-Ensure that only one instance of the class exists.
+		-Provide global access to that instance by:
+			-Declaring all constructors of the class to be private.
+			-Providing a static method that returns a reference to the instance. The lazy initialization concept is used to write the static methods.
+			-The instance is stored as a private static volatile variable.
+
+
+16. create singleton class by early (egar) initialization technique
+	public class Singleton {
+	    private static final Singleton instance = new Singleton();
+
+	    private Singleton() {
+ 	       // Initialize other instance attributes here
+   	 }
+
+	    public static Singleton getInstance() {
+    		return instance;
+    	}
+
+  	  public void showMessage() {
+	        System.out.println("Hello, I am a singleton instance!");
+    	}
+
+	    public static void main(String[] args) {
+        		Singleton singleton1 = Singleton.getInstance();
+        		Singleton singleton2 = Singleton.getInstance();
+
+     	        singleton1.showMessage();
+
+      		  // Both references should point to the same instance
+        		System.out.println(singleton1);
+       		System.out.println(singleton2);
+ 	   }
+	}
+
+17. create singleton class by lazy initialization technique
+	class SingletonClassExample   
+	{   
+	   	private static Singleton s = null;   
+		public String str;   
+	
+		private Singleton()   
+		{   
+			str = "it is an example of singleton class.";   
+		}   
+		public static Singleton getInstance()   
+		{   
+			//lazy initialization  
+			if (s== null)   
+				s = new SingletonClassExample();   
+			return s;   
+		}   
+	} 
+
+18. Create singleton class with thread safty Or Archieve singleton pattern in multithreded environment
+	Thread Safe Singleton: A thread safe singleton is created so that singleton property is maintained even in multithreaded environment. 
+	To make a singleton class thread safe, getInstance() method is made synchronized so  that multiple threads can't access it simultaneously.
+	
+	We can create singleton class with thread safty by 
+	Synchronizing the getInstance() method
+
+	public class Singleton {
+		    private static Singleton instance;
+
+		   private Singleton() {
+      		  // Initialize other instance attributes here
+  		  }
+
+		  // Public synchronized method to provide access to the instance
+   		 public static synchronized Singleton getInstance() {
+   			 if (instance == null) {
+            				instance = new Singleton();
+        			}
+        		   return instance;
+    	      }
+
+ 	   // Other methods of the class
+ 	   public void showMessage() {
+  	        System.out.println("Hello, I am a singleton instance!");
+    	  }
+
+	 public static void main(String[] args) {
+                     Singleton singleton1 = Singleton.getInstance();
+                     Singleton singleton2 = Singleton.getInstance();
+
+                     singleton1.showMessage();
+
+       	   // Both references should point to the same instance
+       	  System.out.println(singleton1);
+                  System.out.println(singleton2);
+              }
+         }
+
+19. What is double-checked locking in Singleton?
+	If you have a multithread application and use singleton pattern, you can use synchronized keyword.
+	 But getInstance() method is synchronized so it causes slow performance as multiple threads can't access it simultaneously and all 	
+	operation is synchronized. So you can use Double checked locking solution.
+	OR
+	Using synchronized we can create singleton class in multi-threading environment also but it can cause slow performance, so we can 
+	use Double check locking mechanism.
+
+	//Thread safty wihout double check locking:-
+	public static synchronized Singleton getInstance2() 
+ 	 { 
+        		if (instance == null) { 
+            		instance = new Singleton(); 
+        		} 
+        		return instance; 
+    	} 
+	*Drawback of above mechanism:-
+	-The entire method is synchronized, which means that only one thread can execute this method at a time.
+	-This approach ensures thread safety, but it can lead to performance issues. Every time getInstance2() is called, the thread must acquire the lock, 
+	 even if the instance has already been created, which can cause unnecessary synchronization overhead.
+
+	//Thread safty with double check locking:-
+	public static Singleton getInstance() 
+	{ 
+	        if (instance == null) { 
+	        	synchronized (Singleton.class) 
+        	   	{	 
+            			if (instance == null) {          // second check required to ensure only one instance created for multiple threded environment
+                			instance = new Singleton(); 
+            			} 
+        	  	} 
+   	   } 
+    	return instance; 
+	}
+	
+	*Advantage of above mechanism:-
+	-This approach uses a double-checked locking mechanism. The method is not synchronized, but the critical section (the part that checks and creates the instance) is synchronized.
+	-This approach is more efficient because synchronization is only used the first time the instance is created. Once the instance is created, subsequent calls to 
+	 getInstance() will not require synchronization, reducing the overhead and improving performance.
+
+19. Abstract class vs Interface
+    a. Purpose 
+	AbstractClass: Used for partial abstraction (can have both abstract and concrete methods).	 
+	Interface: Used for full abstraction (only method signatures until Java 8).
+    
+	b. Method Types
+	AbstractClass: Can have abstract, concrete, static, and final methods.	
+	Interface: Can have abstract (default), static (Java 8+), and default methods (Java 8+).
+	
+	c. Variable Types	
+	AbstractClass: Can have instance variables (with any access modifier).	
+	Interface: Only public, static, and final variables.
+	
+	d. Constructor
+    AbstractClass: Yes, can have a constructor.	
+	Interface: No, cannot have a constructor.
+	
+	e. Multiple Inheritance
+    AbstractClass: No (A class can extend only one abstract class).	
+	Interface: 	Yes (A class can implement multiple interfaces)f.
+	
+	f. Access Modifiers
+	AbstractClass: Can have private, protected, public methods.	
+	Interface: All methods are public by default.
+
+    e. Use Case
+	AbstractClass: Used when a class should provide some common behavior but also be partially abstract.
+	Interface: Used to define a contract for multiple unrelated classes.
+
+	public: The variable is accessible to any class that implements the interface.
+	static: The variable belongs to the interface itself, not to any instance of a class that implements the interface.
+	final: The variable cannot be modified after it's initialized, ensuring that it behaves as a constant.
+
+
+20. Internal working of hashmap?
+	- HashMap initial size = 16 bucket  ..[0,1,2,3...15]
+	- threshold for size is 0.75 means when hashmap fills upto 12 then automatically 
+	its size get increased with size*2 == 16*2=32
+	
+	when we do, h.put(key,value);
+	hashKey = hash(key) and then index will get from that hashKey by performing an operation on generated hash with (n-1)
+	index = hash & (n-1)
+	
+	and then value get store at that index in the form of linked list [hash,key,value,addres of next]
+	
+	hashmap internally call hash(key) method which calculate hashcode for the key and also calculate index for that hashcode
+	and place the value at that index in the form of [hashcode,key,value,address of next]
+
+	-When the number of nodes in a bucket exceeds the threshold (8 by default), the linked list in that bucket is replaced with a red-black tree.
+	-A red-black tree is a self-balancing binary search tree that ensures O(log n) time complexity for insertion, deletion, and search operations.
+	
+21. HashMap vs HashTable vs SynchronizedHashMap vs ConcurrentHashMAp
+	HashMap:-
+		-It is not synchronized.
+		-As it is not synchronized No Lock is there hence, multiple threads can be allowed to operate on given HashMap object.
+		-It allows one null key and multiple null values. 	
+		-Iterator which is used to iterate HashMap is Fail fast means it can throw concurrent modification exception
+		-When to use? for single threaded environment, If u want to use in multithreded environment u should use synchronized block.
+	
+	HashTable:-
+		-It is synchronized.
+		-As it is synchronized there is Lock and it was object level lock, hence only one thread will operate at a time on given hashtable object.
+		-It doesnt not allow null key and null value
+		-Iterator which is used to iterate HashMap is Fail Safe means it cannot throw concurrent modification exception.
+		-It is legacy class not recommonded to use.
+	
+	SynchronizedHashMap:-
+		-It is Synchronized, All operations are synchronized.
+		-As it is synchronized there is lock and it was Object Level Lock,hence only one thread can be allowed to operate on given object of SHMAP.
+		-It allows one null key and n number of null values.
+		-Iterator which is used to iterate HashMap is Fail fast means it can throw concurrent modification exception
+		-Used for multithreaded envioronment.
+
+	ConcurrentHashMap:-
+		-Only write operation are synchronized instead of whole Map.
+		-Segment level lock is used
+		-16 thread perform update operation simultaniously, And n number of thread perform read operation.
+		-Does not allows null key and null value.
+		-Used for multi threaded environment
+		-Iterator of ConcurrentHashMap is fail-safe
+
+22. Fail Safe and Fail Fast Iterator?
+	Iterator:-	Iterator in java are used to iterate over the collection of objects.
+		There are two type of Iterators:
+			A. Fail Safe Iterator
+			B. Fail Fast Iterator
+
+		A. Fail Fast Iterator:-
+			Fail Fast Iterator immediatly throws Concurrentmodification exception if there is structurally modification of the collection of object.
+			Structurally modification means adding, removing any element from collection while a thread is iterating over that collection.
+			
+			Example:- Iterator on Arraylist, HashMap classes are example of Fail Fast Iterator. bcz, As ArrayList and HashMap is not Synchronized also hashset/LinkedList.
+
+			How Fail Fast Iterator Works?
+				To Know the collection is structurally modified or not, fail-fast iterators use an internal flag called modCount. Which is updated 
+				each time a collection is modified. Fail Fast iterator checks the modCount flag whenever it gets the next value (using next() method)
+				and if it finds that the modCount flag has benn modified after this iterator has been created, It throws ConcurrentModificationException.
+
+				Iterator<String> iterator = list.iterator(); // set modCount = false; initially as collection not modified
+				while (iterator.hasNext()) {
+				            String element = iterator.next();  // check every tme is modCount updated or not
+				            System.out.println(element);		// if updated throws ConcurrentModificationException
+			    }
+
+		B. Fail Safe Iterator:-
+			Fail Safe Iterator allow modification of a collection while iterating over it. They use copy of original collection to traverse over the 
+			elements of the collection. These Iterator require extra memory than fail fast as they are cloning the collection.
+			Example :- Iterator on ConcureentHashMap/CopyOnWriteArrayList/CopyOnWriteHashSet
+		
+	Note:  All Collection classes in java.util package is fail fast And all collection classes from java.util.concurrent package is fail safe.
+------
+
+22. How does ConcurrentHashMap achieve scalability?
+	Instead of applying lock on whole map concurrent hashmap allows bucket level lock.
+	Hashtable locks the entire table during a write operation, thereby preventing other reads or writes. This could be a bottleneck in a high-concurrency environment. 
+	ConcurrentHashMap, however, allows concurrent reads and limited concurrent writes, making it more scalable and often faster in practice.
+	
+	The underlying data structure for ConcurrentHashMap is HashTable. ConcurrentHashMap allows concurrent read and thread-safe update operations. 
+	To perform read operation thread won’t require any lock but to perform update operation thread require a lock, but it is the lock of only a particular 
+	part of Map(Bucket level lock). Instead of whole map concurrent update achieved by internally dividing the map into a smaller portion which is defined 
+	by concurrency level. The default concurrency level is 16 i.e  ConcurrentHashMap allows simultaneously read and 16 write(update) operations. The value
+	null is not allowed for both keys and values. While one thread is iterating the other thread can perform update operation and ConcurrentHashMap never throws
+	ConcurrentModificationException.
+
+23.what is synchronous and asynchronous in java?
+	Async is multi-thread, which means operations or programs can run in parallel. Sync is a single-thread, so only one operation or 
+	program will run at a time 
+	OR
+	Synchronous execution is blocking, meaning the program halts at each statement and waits for it to finish before continuing. This causes 
+	delays as the program stops and starts. Asynchronous executions are non-blocking. Statements can be executed in parallel without blocking
+	the overall program flow
+
+24.How HashMap internally work?
+	Hash collisions have negative impact on the lookup time of HashMap. When multiple keys end up in the same bucket, then values along with their keys 
+	are placed in a linked list. In case of retrieval, linked list has to be traversed to get the entry. In worst case scenario, when all keys are mapped
+	to the same bucket, the lookup time of HashMap increases from O(1) to O(n).
+
+	Java 8 has come with the following improvements/changes of HashMap objects in case of high collisions.
+
+	The alternative String hash function added in Java 7 has been removed.
+	Buckets containing a large number of colliding keys will store their entries in a balanced tree instead of a linked list after certain threshold is reached.
+	Above changes ensure performance of O(log(n)) in worst case scenarios (hash function is not distributing keys properly) and O(1) with proper hashCode().
+
+	How linked list is replaced with binary tree?
+		In Java 8, HashMap replaces linked list with a binary tree when the number of elements in a bucket reaches certain threshold. While converting 
+	the list to binary tree, hashcode is used as a branching variable. If there are two different hashcodes in the same bucket, one is considered bigger 
+	and goes to the right of the tree and other one to the left. But when both the hashcodes are equal, HashMap assumes that the keys are comparable, and 
+	compares the key to determine the direction so that some order can be maintained. It is a good practice to make the keys of HashMap comparable.
+	
+24. what is IdentityHashMap?
+	In Java, IdentityHashMap is a class that implements the Map interface. It is similar to the HashMap class, with the main difference being that IdentityHashMap
+	uses reference equality instead of object equality when comparing keys. While HashMap uses the equals() method to compare the keys, IdentityHashMap uses the 
+	== operator to compare the keys. This means that in an IdentityHashMap, two keys are considered equal if and only if they are the same object,  rather than
+	being equal in terms of their contents.
+
+	Example:-
+		IdentityHashMap<String, Integer> identityHashMap = new IdentityHashMap<>(); 
+        identityHashMap.put("A", 1); 
+	    identityHashMap.put(new String("A"), 2); 
+       	System.out.println(identityHashMap.size()); // 2 
+       	System.out.println(identityHashMap.get("A")); // 1 
+
+25. How can we use custom class as key in HashMap?
+	We can conclude that to use a custom class for a key, it is necessary that hashCode() and equals() are implemented correctly.
+	
+26. What will happen if we don't override hashCode method and override only equals method?
+	if two objects are equal according to the equals() method, then their hash codes must be equal as well.
+	If you don't override hashcode() then the default implementation in Object class will be used by collections. 
+	This implementation gives different values for these two objects, even if they are equal according to the equals() method.
+	
+27. What will happen if we don't override equals method and override only hashCode method?
+	
+	Duplicate Entries in HashSet
+	HashSet uses hashCode() to find the bucket but uses equals() to check for duplicates.
+	If equals() is not overridden, the default equals() method in Object (which checks reference equality) will be used.
+	This means two objects with the same hashCode() but different references will be treated as different objects.
+
+28. Intermediate Operations in Java 8 Stream API?
+	Intermediate operations return a new stream. They are lazy, meaning they are not executed until a terminal operation is invoked. 
+	Intermediate operations are typically used for transforming or filtering the stream.
+	
+	Note:- There are no intermediate operations in the Stream API that will be executed without invoking a terminal operation.
+
+	Here are some common intermediate operations:
+	1.filter(Predicate<T> predicate):
+		Filters elements based on a given predicate.
+		Stream<String> stream = Stream.of("apple", "banana", "cherry");
+		Stream<String> filteredStream = stream.filter(s -> s.startsWith("a"));
+	
+	2.map(Function<T, R> mapper):
+		Transforms elements using the given function.
+		Stream<String> stream = Stream.of("apple", "banana", "cherry");
+		Stream<Integer> lengthStream = stream.map(String::length);
+	
+	3.flatMap(Function<T, Stream<R>> mapper):
+		Transforms each element into a stream of new values and flattens the resulting streams into a single stream.
+		List<String> list1 = Arrays.asList("a", "b", "c");
+		List<String> list2 = Arrays.asList("d", "e", "f");
+		Stream<List<String>> stream = Stream.of(list1, list2);
+		Stream<String> flatStream = stream.flatMap(Collection::stream);
+	
+	4.distinct():
+		Removes duplicate elements.
+		Stream<String> stream = Stream.of("apple", "banana", "apple");
+		Stream<String> distinctStream = stream.distinct();
+		
+	5.sorted() and sorted(Comparator<? super T> comparator):
+		Stream<String> stream = Stream.of("banana", "apple", "cherry");
+		Stream<String> sortedStream = stream.sorted();
+		
+	6.limit(long maxSize):
+		Limits the stream to the first maxSize elements.
+		Stream<String> stream = Stream.of("apple", "banana", "cherry");
+		Stream<String> limitedStream = stream.limit(2);
+	
+	7.skip(long n):
+		Skips the first n elements.
+		Stream<String> stream = Stream.of("apple", "banana", "cherry");
+		Stream<String> skippedStream = stream.skip(1);
+
+		
+29. Terminal operations on stream (java 8)?
+	Terminal operations produce a result or a side-effect and mark the end of the stream. Once a terminal operation is executed, 
+	the stream cannot be reused.
+	
+	Common terminal operations include:
+	1. forEach(Consumer<? super T> action):
+		Performs an action for each element of the stream.
+		Stream<String> stream = Stream.of("apple", "banana", "cherry");
+		stream.forEach(System.out::println);
+
+	2. count:
+		The count operation returns the number of elements in a stream as a long value. It is a terminal operation that terminates the stream after its execution. 
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);  
+        		long count = numbers.stream().count();
+	
+	3. collect:
+		The collect operation is used to accumulate elements of a stream into a collection or a single result. It takes a Collector as a parameter, which specifies 
+		the type of collection to be created.  
+			 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);  
+			 List<Integer> evenNumbers = numbers.stream().filter(n -> n % 2==0).collect(Collectors.toList());   
+	
+	4. reduce:
+		The reduce operation combines the elements of a stream into a single value. It takes a BinaryOperator as a parameter, which specifies the reduction operation. 
+			List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);  
+        			int sum = numbers.stream().reduce(0, (a, b) -> a + b);  
+
+30.Difference between wait and sleep in Java?
+	Sleep(): This Method is used to pause the execution of current thread for a specified time in Milliseconds. Here, Thread does not lose its ownership  and
+		 resume’s it’s execution.	
+		-Sleep() method belongs to Thread class.
+		- Sleep() method does not release the lock on object during Synchronization on it own's thread
+		-There is no need to call sleep() from Synchronized context.
+		-Sleep() is a static method. 
+
+		Note:- Every sleep() method in java throws an InterruptedException which is a checked exception hence whenever we are using the sleep method compulsory 
+		we should handle it either by try-catch or by throws keyword otherwise we will get compile-time error.
+
+	Wait(): This method is defined in object class. It tells the calling thread (a.k.a Current Thread) to wait until another thread invoke’s the notify() or notifyAll() 
+		method for this object, The thread waits until it reobtains the ownership of the monitor and Resume’s Execution.
+		-Wait() method belongs to Object class
+		-Wait() method releases lock during Synchronization on it own's thread.
+		-Wait() should be called only from Synchronized context.
+		-Wait() is not a static method. 
+
+	wait() and sleep() are both methods that can pause the execution of a thread, but they serve different purposes and operate in different contexts. Here are the key 
+	differences between wait() and sleep():
+		
+	wait():
+		Purpose: Used for thread communication in a synchronized context. It is part of the Object class and is used to make a thread wait until another thread signals
+		 (using notify() or notifyAll()) that it can proceed. release lock
+		Context: Must be called from within a synchronized block .
+
+	sleep():-
+		Purpose: Used to pause the execution of a thread for a specified period, without any communication or coordination with other threads. not release lock on object
+		Context: Can be called from anywhere and does not require the thread to hold any locks or be within a synchronized block.
+
+31. Difference between notify and notifyAll in Java?
+	The notify() and notifyAll() methods with wait() methods are used for communication between the threads. A thread that goes into waiting state by calling the 
+	wait() method will be in waiting state until any other thread calls either notify() or notifyAll() method on the same object. 
+	
+	notify(): The notify() method is defined in the Object class, which is Java’s top-level class. It’s used to wake up only one thread that’s waiting for an object, 
+	and that thread then begins execution. 
+	notify is used when we know only one waiting thread needs to be unlocked and it doesnt matter which one.
+	If multiple threads are waiting, which specific thread will be awakened is not guaranteed and is up to the JVM's internal scheduling.
+
+	notifyAll(): The notifyAll() wakes up all threads that are waiting on this object’s monitor. 
+	notifyAll is used when we know multiple threads are waiting and we want to unlocked all of them.
+
+32. Implementing Runnable or Extending Thread class which is better?
+	Runnable:-
+	-Runnable is a Interface and we are implementing it.
+	-multiple thread can use shared object when we are using Runnable interface.
+	-if class are implementing Runnable interface, it can be implement another interface as well, bcz multiple inheritance throgh interface can be possible.
+	-require less memory.
+	-here task logic is defined in a separate class that implements Runnable. The Thread class is only responsible for managing the execution of the task.
+	eg:	-Task logic is separated from thread execution, so it can be reused across multiple threads.
+		MyTask task = new MyTask(); // Task logic
+        Thread thread = new Thread(task); // Thread execution
+        thread.start(); // Start the thread
+	Benefits:
+		-The task logic (MyTask) can be reused with different threads.
+			MyTask task = new MyTask(); // Define task once
+
+			// Reuse the same task instance in multiple threads
+			Thread thread1 = new Thread(task);
+			Thread thread2 = new Thread(task);
+			Thread thread3 = new Thread(task);
+		-The MyTask class can extend other classes because it implements Runnable rather than extending Thread.
+		-Task logic is separated from thread execution, so it can be reused across multiple threads.
+		-You can implement Runnable while also extending another class, giving more flexibility.
+
+	Use Runnable when:	
+		-You want to implement functionality in a class that also needs to extend another class.
+
+	Thread:-
+	-Thread is class hence we are extending it.
+	-each thread create unique object and it is associated with it.
+	-if class extends Thread class then it cannot extend any other class. bcz, multiple inheritance through class is not possibel in java.
+	-Requires more memory
+	- Task logic is tightly coupled with thread execution. A Thread object can only be started once, so its task cannot be reused in a new thread.
+		MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
+
+        thread1.start();
+        thread2.start();
+
+	Advantage:-
+		-Can access Thread class methods and fields directly.
+	Limitation:- 
+		-Java does not support multiple inheritance, so if you extend Thread, you cannot extend another class
+
+	Use Thread when:
+		-You are dealing with a simple scenario where extending Thread is sufficient and you don’t need to inherit from another class.
+		
+		
+	using runnable with anonymus class
+	Runnable r = new Runnable(){
+		@override 
+		public void run(){
+			.....
+			.....
+		}
+	};
+	
+	using runnable with lambda
+	Runnable r = ()-> {
+		.....
+		.....
+	};
+
+33.When to use runnable and when to use thread class?
+	-when we extend Thread class, we can't extend any other class even we require and When we implement Runnable, we can extends another class.
+	-when we extend Thread class, each of our thread creates unique object and associate with it means task logic is tightly couples with thread execution. 
+	But in Runnable task logic is seperate from thread execution so it can be reused.
+
+33. What is the difference between throw and throws in Java?
+	Throw:-
+		-Throw keyword mainly used to explicitly throw an exception from method or block of code. 
+		-it is used inside method.
+		-using this we can throw both checked or unchecked exceptions.
+		-throw is followed by an object(instance) of Exception class.
+		-Throw can be used to throw only one exception at a time.
+		
+	Throws:-
+		-Throws keyword use to throw exception from method level. 
+		-It is used with method signature.
+		-Throws is followed by name of exception class.
+		-It can be throw multiple exceptions separated by comma.
+		
+	Example:-
+		public void JavaHungry(String str) throws ArithmeticException, NullPointerException
+		{
+			throw new ArithmeticException(); 
+		} 
+
+34. Autoboxing and Unboxing
+	Autoboxing: The automatic conversion of a primitive type to its corresponding wrapper class. For example, converting int to Integer.
+		List<Integer> integers = new ArrayList<>();
+        
+       	 // Add primitive int values to the list (autoboxing occurs here)
+       	 integers.add(10);  // 10 is automatically converted to Integer.valueOf(10) / int->Integer
+         integers.add(20);  // 20 is automatically converted to Integer.valueOf(20)
+
+	Unboxing: The automatic conversion of a wrapper class to its corresponding primitive type. For example, converting Integer to int.
+		List<Integer> integers = new ArrayList<>();
+      	integers.add(10);
+       	integers.add(20);
+        
+		// Retrieve and use the Integer values from the list (unboxing occurs here)
+		int firstValue = integers.get(0);  // Integer.valueOf(10) is automatically converted to int
+		int secondValue = integers.get(1); // Integer.valueOf(20) is automatically converted to int
+
+
+35. ClassPath vs PATH?
+	ClassPath:-
+		Describe location where required .class files are available, Java Compiler and JVM uses classpath, if classpath is not set our 
+	    program may not compile or may not run.
+		
+	PATH:-
+		location where binary executables are available which are responsible for compiling java file means when we compile java class using 
+		javac test.java internally javac comand execute javac.exe and program finds javac.exe file in PATH location of java.
+		if we do'nt set path it will throw an error running java command.
+
+36. What is PolyMorphism?
+	 It means the ability of objects to take on many forms.
+	 the ability of objects to take on many forms. In other words, it allows different objects to respond to the same message or method call in multiple ways.
+
+37. What is Java String Pool?
+	A Java String Pool is a place in heap memory where all the string literals defined in the program are stored. JVM checks for the presence of the object in the 
+	String pool, If String is available in the pool, the same object reference is shared with the variable, else a new object is created.
+
+38. Can a Serializable class contains a non-serializable field in Java?
+	hint: Yes, but you need to make it either static or transient.
+
+39.  Difference between this and super in Java? 
+	This keyword It is a reserved keyword in Java that is used to refer to the current class object.  and super keyword  is used to refer to the base class object.
+
+40. What is Comparable and Comparator Interface.
+	a. Comparable
+	Package: java.lang
+	Comparison Logic: Defined within the class itself.
+	Method: compareTo()
+	Single/Multiple Orderings: Only one natural ordering per class.
+	Usage: Used when objects have a natural ordering.
+	Flexibility: Limited to one sorting logic.
+
+	b. Comparator
+	Package: java.util
+	Comparison Logic: Defined in a separate class or inline.
+	Method: compare()
+	Single/Multiple Orderings: Multiple custom orderings can be defined.
+	Usage: Used for custom sorting or when you don’t control the object's class.
+	Flexibility: Highly flexible, supports multiple sorting logics.
+
+41. Difference between Checked and Unchecked Exception in Java?
+	Checked Exceptions
+	Compile-Time Check: Checked by the compiler.
+	Declaration: Must be declared using throws or handled with try-catch.
+	Common Causes: External factors like file I/O or database access.
+	Examples:IOException, SQLException, FileNotFoundException
+	Developer Responsibility: Handle them explicitly.
+
+	Unchecked Exceptions
+	Compile-Time Check: Not checked by the compiler.
+	Declaration: No need to declare or handle explicitly.
+	Common Causes: Programming errors like invalid logic.
+	Examples: NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException
+	Developer Responsibility: Avoid them through better coding practices.
+
+42. How will you print odd-even numbers using threads in sequence?
+	
+	public class OddEvenThread {
+	private int MAX = 10;
+	private int number = 1;
+	public void printEven() {
+		synchronized (this) {
+			while (number < MAX) {
+				while (number % 2 != 0) {
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				System.out.println(number + "from evenThread");
+				number++;
+				notifyAll();
+			}
+		}
+	}
+
+	public void printOdd() {
+		synchronized (this) {
+			while (number < MAX) {
+				while (number % 2 == 0) {
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				System.out.println(number + " from oddThread");
+				number++;
+				notifyAll();
+			}
+		}
+	}
+	
+	public static void main(String a[])
+	{
+		OddEvenThread oddEvenThread = new OddEvenThread();
+		
+		Thread oddThread = new Thread( new Runnable() {
+			
+			@Override
+			public void run() {
+				oddEvenThread.printOdd();
+			}
+		});
+		
+		Thread evenThread = new Thread( new Runnable() {
+			
+			@Override
+			public void run() {
+				oddEvenThread.printEven();
+			}
+		});
+		
+		evenThread.start();
+		oddThread.start();	
+	}
+	}
+
+43. Explain method overloading Java.
+	Method overloading in Java means having two or more methods (or functions) in a 	
+	class with the same name and different arguments (or parameters). It can be with a different number of arguments or different data types of arguments.
+
+	Rules of method overloading:-
+		-The compiler does not consider the return type while differentiating the overloaded method. But you cannot declare two methods with the same signature and 
+		different return types. It will throw a compile-time error. If both methods have the same parameter types, but different return types, then it is not possible.
+		- No, if methods have the same name, the same number of parameters, and the same type of parameters, but only differ in access modifiers, they do not qualify as 
+		overloaded methods. Method overloading is determined by the method signature, which includes the method name and the parameter list (number, type, and order of parameters).
+		 The access modifier does not contribute to the method signature and therefore cannot be used to differentiate overloaded methods.
+
+44. What is volatile in Java?
+	The volatile keyword in Java is used to mark a Java variable as “being stored in main memory”. 
+	Every thread that accesses a volatile variable will read it from main memory,
+	and not from  the CPU cache. This way, all threads see the same value for the volatile variable.
+
+44. How to achieve Thread Safety
+	1.Using Synchronization
+		Synchronization is the process of allowing only one thread at a time to complete the particular task. It means when multiple threads executing simultaneously, 
+		and want to access the same resource at the same time, then the problem of inconsistency will occur. so synchronization is used to resolve inconsistency problem by 
+		allowing only one thread at a time. Synchronization uses a synchronized keyword. Synchronized is the modifier that creates a block of code known as a critical section.	
+	2.Using Volatile keyword
+		A volatile keyword is a field modifier that ensures that the object can be used by multiple threads at the same time without having any problem. volatile is one 
+		good way of ensuring that the Java program is thread-safe. a volatile keyword can be used as an alternative way of achieving Thread Safety in Java.
+
+46. Difference Between Atomic, Volatile and Synchronized?
+	Synchronized:-
+		-Synchronized is the modifier applicable only for methods and blocks but not for the variables and classes. 
+		-There may be a chance of data inconsistency to overcome this problem we should go for a synchronized keyword when multiple threads are trying to operate
+		 simultaneously on the same java object. If a method or block declares as synchronized then at a time only one thread is allowed to execute that method or 
+		  block on the given object so that the data inconsistence problem will be resolved.
+		-The main advantage of synchronized keywords is we can resolve data inconsistence problems but the main disadvantage of this keyword is it increases the waiting
+		 time of the thread and creates performance problems. 
+		-Synchronized keyword not applicable on variable and classes. It can only used with method and block.
+		- Synchronized keyword guarantees atomicity
+
+	Volatile:-
+		- Volatile keyword used only with variable.
+		- It ensures that field can be accessed by multiple threads simultaneously means there is a shared variable which can be accessed by thread t1,t2 and t3 
+		  and we want if any change in value of that variable can be immediatly visible to all this thread t1,t2 and t3 simultaneously.
+		-every read and write operation performed by each thread directly goes to main memory instead of individual cache of each thread.
+		-It guarantess the visibility of variable simultaneously to all thread but not preventing any thread from simultaneously accessing and modifying 
+		 the value of variable.
+		-volatile keyword does not guarantees atomicity
+
+	Atomic:-
+		-Whenever we are performing any compound operation on any individual unit, consider example like, int n=2;
+		when we are doing increment or decrement operation such operations are not atomic until we are not explicitly mentioned it.
+		means, n++; this will perform in three step 
+			- read the value of n=2
+			- Add 1 to this value 
+			- store this incremented value in n
+
+			in between these three step if any threads comes and modify the value the data incosistancy comes and value get corrupt, to avoid these we nedd
+			 Atomicity means atomic variable.
+
+47. Can volatile make a non-atomic operation to atomic?
+	The volatile keyword ensures visibility of changes to variables across threads, meaning that when one thread updates a volatile variable,
+	 the new value is immediately visible to other threads. However, it does not provide any atomicity guarantees.
+
+47. Can we start the thread twice? 
+	Ans: No, A thread cannot be restarted after it has been begun.
+
+48. what will happen if we do not override thread class run method?
+	If you do not override the run() method in a class that extends Thread, the thread's execution will not perform any custom behavior. Instead, it will execute the default 
+	implementation of run() provided by the Thread class, which does nothing. This means the thread will start, run, and then immediately terminate without doing any work.
+
+48. How do you call wait() method? using if block or loop? Why?
+	wait() method should always be called in loop because it's possible that until thread gets CPU to start running again the condition might not hold,
+	 so it's always better to check condition in loop before proceeding. 
+
+49. What will happen if we call run method from main directly?
+	When you call the run() method directly from the main method, it will execute in the current thread (the main thread) rather than creating a new thread. This means that 
+	the run()  method will run just like any other method call within the main thread, and no new thread will be started. 
+
+49. What is the difference between block and method in Java?
+	Methods are also (generally) named and can be called from elsewhere in your code by that name. 
+	Blocks cannot, they can only be reached by following the flow of the code in your class.
+
+50. Synchronized method vs Synchronized block		
+	Synchronized method:-
+	   Advantage:
+		-Easier to implement when the entire method needs to be synchronized. This can lead to cleaner and more readable code.
+		-Less boilerplate code, as you do not need to specify a lock object explicitly.
+	   Disadvantage:
+		-Coarse-grained locking can lead to unnecessary blocking, as it locks the entire method even if only a small part is critical.
+		-May result in reduced performance if the method contains both critical and non-critical sections, leading to threads waiting longer than necessary.
+
+	Synchronized block
+	   Advantage:
+		-More efficient if only part of the method needs synchronization, allowing non-critical sections to run concurrently without waiting.
+		-Fine-grained locking allows you to synchronize only the critical section of the code, which can lead to better performance and reduced contention.
+
+	   Disadvantage:
+		-Slightly more complex to implement, as you need to explicitly specify the lock object.
+		
+51. Can we make array volatile in Java?
+	Yes, you can make an array volatile in Java but only the reference which is pointing to an array, not the whole array. 
+	When you declare an array as volatile, you are making the reference to the array volatile, not the individual elements of the array.
+	This means that any changes to the reference itself (e.g., pointing to a different array) are immediately visible to other threads. However, 
+	changes to the individual elements of the array are not automatically volatile.
+
+/// TODO
+52. Can we access the private method in Java? 
+	hint: yes, in the same class but not outside the class
+
+
+53. what is stream api and its advantages?
+	The Stream API is a feature in Java introduced in Java 8. 
+	It allows developers to process sequences of elements, such as collections, 
+	in a functional and declarative manner.
+	
+	Advantages:-
+		- The Stream API allows for more concise and readable code by providing a high-level abstraction for operations on collections.
+
+54. Rest Template is Synchronous or Asynchronous?
+	The RestTemplate in Spring is a synchronous client to perform HTTP requests. When you make a call using RestTemplate,
+	 the thread that initiates the request will block until the response is received. This means that the caller will wait for the server's
+	 response before proceeding to the next line of code.
+
+	Example:
+		RestTemplate restTemplate = new RestTemplate();
+		String url = "https://api.example.com/data";
+		ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+		System.out.println(response.getBody());
+	
+	If you need to perform non-blocking HTTP requests, you should consider using WebClient, introduced in Spring 5 as part of the Spring WebFlux module.
+	 WebClient supports both synchronous and asynchronous operations, making it more suitable for reactive and non-blocking applications.
+
+	WebClient webClient = WebClient.create("https://api.example.com");
+
+	Mono<String> responseMono = webClient.get()
+                                     .uri("/data")
+                                     .retrieve()
+                                     .bodyToMono(String.class);
+
+	responseMono.subscribe(response -> {
+   		 System.out.println(response);
+	});
+
+55. What is Spring web flux?
+	Spring WebFlux is used to build modern, reactive, and scalable web applications that can handle high concurrency and I/O-bound tasks efficiently.
+	 Its non-blocking nature, support for reactive programming, and integration with other reactive technologies make it a powerful choice for developing
+	 performant and responsive applications.
+
+	Use Cases for Spring WebFlux:-
+		-Real-Time Applications: Chat applications, live sports updates, and online gaming
+
+56. What immutable class ?
+	Immutable class in java means that once an object is created, we cannot change its content. In Java, all the wrapper classes (like Integer, Boolean, Byte, Short) and String 
+	class is immutable. We can create our own immutable class as well. 
+	
+	Steps to create  immutable class:-
+		-The class must be declared as final so that child classes can’t be created.
+		-Data members in the class must be declared private so that direct access is not allowed.
+		-Data members in the class must be declared as final so that we can’t change the value of it after object creation.
+		-A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
+		-Deep Copy of objects should be performed in the getter methods to return a copy rather than returning the actual object reference)
+
+	Advantages:-
+		Thread Safety: Immutable objects are inherently thread-safe as their state cannot be changed after creation. This eliminates the need for synchronization.
+		Simplicity: The logic of an immutable class is simpler as it does not have to manage changes to its state.
+		Security: Immutable objects are secure by design because their state cannot be modified, which reduces the risk of unintended side effects.
+
+	Example:-
+	import java.util.Collections;
+	import java.util.List;
+
+	public final class ImmutableClass {
+	    private final String name;
+	    private final List<String> degrees;
+
+	    public ImmutableClass(String name, List<String> degrees) {
+	        this.name = name;
+	        this.degrees = Collections.unmodifiableList(degrees);
+    	   }
+
+	    public String getName() {
+	        return name;
+    	  }
+
+	    public List<String> getDegrees() {
+	        return degrees;
+    	   }
+	}
+
+
+
+	Prevent External Modification:
+		Even if the list is final, the reference to the list cannot be changed, but the elements within the list can still be modified if the list is mutable.
+		By wrapping the list with Collections.unmodifiableList(), we create a read-only view of the list. Any attempt to modify the list (e.g., adding, removing,
+		 or changing elements) will result in an UnsupportedOperationException.
+
+57. Deep copy vs Shallow copy in java?
+	Shallow Copy
+		When we do a copy of some entity to create two or more than two entities such that changes in one entity are reflected in the other entities as well,
+		then we can say we have done a shallow copy. In shallow copy,  new memory allocation never happens for the other entities, and the only reference is copied to the other entities. 
+		The following example demonstrates the same.
+
+	Deep Copy:-
+		When we do a copy of some entity to create two or more than two entities such that changes in one entity are not reflected in the other entities, then we can 
+	say we have done a deep copy. In the deep copy, a new memory allocation happens for the other entities, and reference is not copied to the other entities. Each entity 
+	has its own independent reference. The following example demonstrates the same.
+
+	Shallow and Deep Copy Example:-
+		In shallow copy we are just copying reference of one object into another due to this, if changes done by any obj can be reflect on another object.
+		But in deep copy instead of copying reference we are copying actual content hence changes done on one object do not reflect on another.
+
+		class ABCD {
+			int a;
+		}
+
+		public class ShallowDeepCopy {
+
+			public static void shallowCopyExample() {
+				// creating an object of the class ABC
+				ABCD a1 = new ABCD();
+				a1.a = 10;
+
+				// it will copy the reference, not value
+				ABCD a2 = a1;
+
+				// updating the value to 20
+				// using the reference variable a2
+				a2.a = 20;
+
+				// printing the value of a using reference variable a1
+				System.out.println("Value of a in shallowCopyExample => " + a1.a);  // 20 means value get modified for a1 also
+			}
+
+			public static void deepCopyExample() {
+				// creating an object of the class ABC
+				ABCD a1 = new ABCD();
+				a1.a = 100;
+
+				// creating a new object and copying the value
+				ABCD a2 = new ABCD();
+				a2.a = a1.a;
+
+				// updating the value to 200
+				a2.a = 200;
+
+				// printing the value of a using reference variable a1
+				System.out.println("Value of a in deepCopyExample => " + a1.a);  // 100 means by chaning valy via a2 not reflect on a1
+			}
+
+			public static void main(String[] args) {
+				System.out.println("Shallow Copy Example:");
+				shallowCopyExample();
+				
+				System.out.println("Deep Copy Example:");
+				deepCopyExample();
+			}
+		}
+
+
+62. Can we call wait method outside synchronized block?
+	It's important to note that the wait() method must be called from within a synchronized block or method. 
+	If it is called outside of a synchronized context, the program will throw an IllegalMonitorStateException .
+
+63. Why we cannot call wait outside the synchronied block ? And what happen if we call wait() outside of synchronized block?
+	Why wait() Must Be Called Inside a Synchronized Block:
+
+	Monitor Ownership:
+	wait() is a method of the Object class, and it operates on the object's monitor (lock).
+	To call wait(), the current thread must own the monitor of the object on which wait() is called.
+	The synchronized keyword is used to acquire the monitor.
+	If you call wait() outside a synchronized block, the thread doesn't own the monitor, and the JVM throws an IllegalMonitorStateException.
+	Atomicity of Check-Wait:
+
+	The typical pattern for using wait() involves checking a condition and then calling wait() if the condition isn't met.
+	This check-wait operation must be atomic to prevent race conditions.
+	The synchronized block ensures that the check and the wait() call occur as a single, indivisible operation.
+	If you call wait() outside a synchronized block, there's a risk that another thread could change the condition between the check and the wait() call, leading to unexpected behavior.
+	Correct Inter-Thread Communication:
+
+	wait() is used in conjunction with notify() or notifyAll() to enable threads to communicate and coordinate their actions.
+	notify() and notifyAll() also require the thread to own the object's monitor.
+	The synchronized block provides the necessary context for these methods to work correctly.
+
+64. what happens when you force a constant hashCode() in a Java class used as a key in a HashMap, 
+	and how it impacts the put() operation?
+
+	Impact of a Constant hashCode():
+	Uniform Bucketing:
+	If hashCode() always returns the same value (e.g., always 1), every put() operation will place key-value pairs into the same bucket.
+	Increased Collisions:
+	This effectively turns the HashMap into a single, long bucket, significantly increasing hash collisions.
+	equals() Reliance:
+	The HashMap now relies heavily on the equals() method to differentiate between keys within that single bucket.
+	Performance Degradation:
+	The HashMap's average O(1) (constant-time) performance for put(), get(), and remove() is lost.
+	These operations degrade to O(n) (linear time) in the worst case, where 'n' is the number of entries.
+	Essentially, it becomes like a linked list lookup, where each key must be compared using equals() in a sequential manner.
+
+65. Can we use immutable class as key in hashmap, is it a good way?
+	Yes, using an immutable class as a key in a HashMap is not only possible but is also considered a best practice. 
+	Here's why:
+	Benefits of Using Immutable Objects as Keys
+		Consistency in hashCode() and equals():
+
+		Immutable objects do not change after they are created. This guarantees that the hashCode() and equals() methods will consistently return the same
+		result for the same object, ensuring that the key remains in the correct bucket in the HashMap.
+		If a mutable object is used as a key, and its state changes after insertion, the hashCode() and equals() methods might return different values, 
+		causing the HashMap  to lose track of the key's location. This can lead to issues 
+		like not being able to retrieve the value using the key, even though it exists in the map.
+
+		Using immutable objects as keys in a HashMap is a good practice. It ensures consistency, avoids potential bugs related to mutable state changes,
+		and provides thread safety when working in concurrent environments.
+
+66. 
+	class A{
+		public void synchronized m1()
+		{
+			Thread.sleep(1000);
+		}
+	}
+
+	o1,o2 are two object of class A
+
+	thread t1 --> o1.m1();
+
+	thread t2 --> o2.m1();
+	Will it work parallely or one after another.
+
+	==> It will run parallaley as there is object level lock and these are two different objects.
+	If in above scenario we want to make execution in one after another manner what change need to do?
+		1. Using static synchronized Method
+			class A {
+   				 public static synchronized void m1() {
+        					try {
+           						 Thread.sleep(1000); // Simulate some work
+      					  } catch (InterruptedException e) {
+           						 Thread.currentThread().interrupt(); // Handle the exception properly
+        					}
+    				}
+			}
+
+		Explanation: When you declare a method as static synchronized, the lock is on the Class object of A (i.e., A.class), 
+		meaning that only one thread can execute any static synchronized method of class A at a time, regardless of the instance.
+
+		2. Synchronizing on the Class Object
+			class A {
+    				public void m1() {
+        					synchronized (A.class) {
+           						 try {
+              							  Thread.sleep(1000); // Simulate some work
+           						 } catch (InterruptedException e) {
+              							  Thread.currentThread().interrupt(); // Handle the exception properly
+            						}	
+        						}
+    					}
+				}
+
+			Explanation: By explicitly synchronizing on A.class inside the m1() method, you ensure that any thread calling m1() on any
+				 instance of A will need to acquire the lock on the class object, forcing serialized execution across all instances.
+			
+			Thread t1 (o1.m1()) will acquire the lock on A.class and execute m1().
+			Thread t2 (o2.m1()) will be blocked until t1 releases the lock on A.class, meaning t2 will execute m1() only after t1 has finished.
+
+		3. With join(), you can ensure that one thread completes execution before the next thread starts, 
+		even if they are operating on different objects.
+
+			 // Start the first thread
+        			t1.start();
+
+       			 try {
+           					 // Wait for t1 to finish before starting t2
+          				  t1.join();
+        			} catch (InterruptedException e) {
+            				e.printStackTrace();
+		        }
+
+		        // Now start the second thread
+		        t2.start();
+
+67. How to make below class as immutable class
+	
+	1. Declare the class as final:
+	Prevents subclassing, which could alter immutability.
+	
+	2. Make all fields private and final:
+	Prevent direct access and modification of fields after initialization.
+	
+	3. Do not provide setters:
+	Ensure no external method can modify the state.
+
+	4. Initialize fields via the constructor:
+	Ensure all fields are set only once, during object creation.
+
+    5. Return defensive copies of mutable objects:
+	If a field holds a mutable object (e.g., a List or Date), 
+	return a copy instead of the original object to avoid external modifications.
+
+68. How can we change (increase or decrease) the size of an array variable without losing the previous values? 
+	In Java, arrays have a fixed size once created, so we cannot directly change their size. However, we can achieve the effect of resizing an array by creating a new array with the desired size and copying the contents of the original array into it.
+	
+		// Increase size to 10
+		int[] largerArray = Arrays.copyOf(originalArray, 10);
+        
+        // Decrease size to 3
+        int[] smallerArray = Arrays.copyOf(originalArray, 3);
+		
+69. Reflection API
+	The Reflection API in Java is a powerful tool that allows a program to examine and manipulate the behavior and structure of classes, methods, fields, and constructors at runtime. 
+	It provides the ability to dynamically inspect classes, methods, and fields, even if their names are not known at compile time. 
+	This is particularly useful for creating flexible and reusable code (e.g., frameworks, libraries, and tools).
+	
+	The java.lang.reflect package contains the key classes for the Reflection API:
+	Class: Represents the metadata of a class.
+	Example: Class<?> clazz = MyClass.class;
+	
+	
+	Constructor: Represents a constructor of a class.
+	Example: Constructor<?> constructor = clazz.getConstructor(parameterTypes);
+	Object obj = constructor.newInstance(fieldValue);
+
+	Field: Represents a field (attribute) in a class.
+	Example: Field field = clazz.getDeclaredField("fieldName");
+	field.setAccessible(true);
+    field.set(obj, fieldValue);
+
+	Method: Represents a method in a class.
+	Example: Method method = clazz.getDeclaredMethod("methodName", parameterTypes);
+	method.setAccessible(true);
+    method.invoke(person);
+	
+	Reflection can break encapsulation (e.g., accessing private fields/methods), so it should be used cautiously.
+	It has a performance overhead because it bypasses compile-time checks and uses runtime processing.
+	It may cause security concerns, as it can expose private data and methods.
+	Use it sparingly—only when there’s no better alternative.
+
+70. thread life cycle
+    new->runnable->running->waiting/blocked->terminated 
+
+71. thread functions
+ 1.run()
+ 2.start()
+ 3.join()
+ 4.sleep()
+ 5.wait()
+ 6.notify()
+ 7.notifyAll()
+ 8.setPriority() # min/normal/max priority enums # hints cpu to set priority
+ 9.getCurrentThread().getName()
+ 10.getCurrentThread().getPriority()
+ 11.interrupt()
+ 12.yield() # hints() cpu to give chance to other threads
+ 13. setDaemon(true) #backgroud thread for which JVM do not wait before terminating
+ 
+72. lock functions
+	Lock is an interface
+	Lock l = new ReentrantLock()
+	A reentrant lock is a synchronization mechanism that allows a thread to acquire the same lock multiple times without blocking itself. 
+	This is a crucial feature that prevents deadlocks in situations where a thread needs to access a shared resource recursively or through multiple method calls
+	trylock()
+	trylock(time,timeunit)
+	lock() # waits indefinetly for locking
+	unlock()
+	
+	
+73. what is functionalInterface
+	A Functional Interface in programming (especially in Java) is an interface that contains exactly one abstract method. 
+	It can have multiple default and static methods, but only one abstract method. 
+	Functional interfaces are primarily used for lambda expressions and method references, 
+	making code more concise and readable.
+	
+	Annotated with @FunctionalInterface (Optional): This annotation ensures that the interface follows the functional interface rules.
+
+
+--->lamba expression is anonymus function
+
+74. why should be use threadpool
+	1. resource management
+	2. Response time
+	3. control over thread count
+	
+	we can do it using executor Framework of java
+	✔ Manages a pool of worker threads instead of creating new threads for every task.
+	✔ Executes tasks asynchronously without blocking the main thread.
+	✔ Supports task scheduling (fixed-rate, fixed-delay).
+	✔ Gracefully shuts down running threads.
+	
+	// Create a thread pool with 3 threads
+    ExecutorService executorService = Executors.newFixedThreadPool(3);
+	executorService.execute(Runnable obj); // runnable uses run function which returns void
+	
+	// Callable<T> allows tasks to return results.
+	executorService.submit(Runnable obj); // runnable uses call function which can return any value.
+	Future<Integer> future = executor.submit(() -> {
+            Thread.sleep(2000);
+            return 10 * 5;
+    });
+	int result = future.get();
+	future.isDone()
+	future.get(time::milliseconds)
+	future.isCancelled()
+	
+	// used only one thread 
+	ExecutorService executor = Executors.newSingleThreadExecutor();
+	
+	// shutting down the thread 
+	executorService.shutdown();  // Graceful shutdown (finishes running tasks)
+	
+75. Cyclic Barrier vs Countdown latch?
+
+Feature					CountDownLatch								CyclicBarrier
+Resettable?				No (One-time use)							Yes (Can be reused)
+Purpose					Waits for a set number of tasks to finish	Waits for threads to reach a common point
+Threads Proceed	When 	the count reaches 0						 	When all threads reach the barrier
+Method to Wait			.await()									.await()
+Method to Decrement		.countDown()								N/A (Automatically managed)
+Example Use Cases		Waiting for multiple services to start		Synchronizing parallel computations
+	
+	
+
