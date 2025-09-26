@@ -1,0 +1,38 @@
+SD26691695 Upgrading OS for new teams app
+
+
+50k, 80k, 2.1L, 2.76L, 3.5L = 9.66
+
+28.2 - 9.66 = 18.56
+
+		old 			new
+2.5L	0				0
+2.5L	0.125	5%		0.125   5%
+1L		0.20	20%		0.05	5%
+1.5L    0.30	20%		0.15	10%
+1.5L	0.30	20%		0.15	10%
+1L 		0.20	20%		0.15	15%
+2L  	0.60	30%		0.30	15%			
+3L		0.90	30%		0.60	20%
+	
+Total Income = 28.2L
+
+
+For old regime, After 50K(compulsory deduction),
+80k(medical insr.), 2.1L(rent),
+2.76(house loan), 3.5L(political donation) deductions from 
+total income, 18.56L remains as net income.
+so, tax on the remaining income, (18.56L - 15L)*0.3 = 1.07L
+
+net tax for old regime = 0.125+0.2+0.3+0.3+0.2+0.6+0.9+1.07 = 3.695
+
+For new regime, After 50Kcompulsory deductions from 
+total income, 27.70L remains as net income.
+so, tax on the remaining income, (27.70L - 15L)*0.3 = 3.81L
+
+net tax for new regime = 0.125+0.05+0.15+0.15+0.15+0.3+0.6+3.81 = 5.34L
+
+
+new regime tax - old regime tax = 5.34-3.7 = 1.635
+
+20K given to political party => net tax saved compared to new is 1.635

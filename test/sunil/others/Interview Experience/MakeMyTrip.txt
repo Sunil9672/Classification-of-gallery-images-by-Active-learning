@@ -1,0 +1,132 @@
+Round 1, coding round, 2 coding questions:
+
+-> Given a string and pattern(consisting of ?, * and alphabets) check if the pattern matches the string
+-> In a  given array of ints, count how many numbers are smaller to the right for each position.
+
+
+Round 2, 1 coding question, 1 LLD question:
+
+-> Asked to discuss any problem I might be having in the ongoing projects at my current company.
+-> Given a string having 'H' and '_', e.g. "H_H_H_H", where H denotes a house and '_' denotes a blank space. We are allowed to place an underwater tank at any blank space and that tank can support water requirements for adjacent houses if any are present. Determine the minimum number of water tanks required to so that all houses can get water, return -1 it's not possible.
+		H_H -> 1 
+		HH_H_H -> -1
+		H__H_H -> 2
+		H__H_H
+
+Choose to fill right side blank space then left if required. Greedy algo
+
+-> Design event store system with following requirements
+	1. Slide, swipe, click types of event generated from an application for a user
+	2. Event data to be stored in db
+
+//"POST storeEvent/EventStore/"
+//{
+//	
+//	
+//}
+
+enum EventType {
+	SLIDE, SWIPE, CLICK;
+}
+
+class Event {
+	private String user;
+	private String applicationName;
+	private Date timeStamp;
+	private EventType eventType;
+
+	Event(String user, String applicationName, Date timeStamp, EventType eventType) {
+		this.user = user;
+		this.applicationName = applicationName;
+		this.timeStamp = timeStamp;
+		this.eventType = eventType;
+	}
+
+//	getters
+}
+
+interface StoreStrategyInterface {
+	public void createDBConnection(JSONObject dbConnectionData);
+	public int storeEventInDb(Event event);
+}
+
+class EsStoreStrategy implements StoreStrategyInterface {
+	RestHighLevelClient client;
+	
+	@Override
+	public void createDBConnection(JSONObject dbConnectionData) {
+	}
+
+	@Override
+	public int storeEventInDb(Event event) {
+		return 1;
+	}
+}
+
+class EventStoreClass {
+
+	private LinkedBlockingQueue<Event> blockingQueue;
+	private StoreStrategyInterface storeStrategy;
+
+	public EventStoreClass(StoreStrategyInterface storeStrategy) {
+		blockingQueue = new LinkedBlockingQueue<>();
+		this.storeStrategy = storeStrategy;
+	}
+
+	public int storeEvent(JSONObject eventData) {
+		Event event = formatting(eventData);
+		return storeStrategy.storeEventInDb(event);
+	}
+
+	public Event formatting(JSONObject eventData) {
+		return new Event("", "", new Date(), EventType.CLICK);
+	}
+
+}
+
+	<Interface> Event
+	getUser()
+	getType()
+	getApplicationOrigin()
+	getTimeStamp()
+	
+	slide, swipe, click implements Event
+	
+	LinkedBlockingQueue<Event> blockingQueue;
+	.put(Event event);
+	.take();
+	
+	
+	"user_event_tracking_index"
+	"dynamicMapping": "true",
+	"dynamicTemplate": {},
+	"properties":
+	"user" : "keyword"
+	
+	
+//	Elasticsearch
+	Map<String, Object> dataMap = render(Event event);
+	
+	EsBootStrapper.getInstance().getClient().index(new IndexRequest(""))
+
+
+Round 3, Lead round -> HLD
+
+-> Started with reading resume and asking to tell something about myself that is not their in the CV
+-> Asked about the first point, based on spark, what is spark how it is used.
+-> Asked me to explain a project which I found most interesting in my current experience.
+-> Gave me below question to solve, had to write pseudocode for this. ( file has to be processed in a distributed manner)
+Given a large text file containing a single word in each line, how to count top-k frequently occurring words.
+Ans: Divide file into chunks. Process chunks in separate worker nodes and create a hashMap of type concurrentHashMap<String, AtomicLong>
+	for storing the frequencies of words. Then 
+
+
+Lockless programming
+Concurrent Hashmaps
+Distrubution Patterns
+ 
+Spring
+Rust
+Python
+LLM 
+	

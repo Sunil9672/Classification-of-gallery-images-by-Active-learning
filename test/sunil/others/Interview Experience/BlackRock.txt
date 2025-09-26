@@ -1,0 +1,23 @@
+Round1, Coding and OOPs:
+
+1. Hackerrank question. 
+You have n length array of samples of a data contributed by different people, where is nums[i] denotes the number of samples contributed by the ith person. Now, GPU needs to be trained using these samples but GPU can only process batches upto a number, maxBatches, in overall training without overloading.
+A Single batch can have partial data also. Find the minimum batchSize possible such that the total batches formed for training do not exceed the maxBatches.
+
+2. Oops questions:
+-> what is the volatile keyword in java, where is it useful?
+-> what is the class diamond problem in java? how to navigate through this?
+-> Implementation of hashMap? what happens if .equals() is not implemented properly, how it affects hashMap working?
+-> Explain resume points, how did it, what was the reason for doing it, what impact it made?
+-> What the JRE, JDK, JVM? how does the JVM starts up?
+
+
+Round2, Tech Stack and LLD:
+
+-> Spring vs SpringBoot?
+-> Starter dependency in SpringBoot?
+-> How do you secure the microservices?
+-> What do you use for building the jar?
+-> Automation of deployement? Automation of testing?
+-> Design the below system, which would be scalable and secure:
+Design a foreign currency exchange (FX) exchange application which takes in user requests for buy and sell FX and communicates with a FX engine in secure manner. It will first get the quote from the FX engine then return it back to the User, then on final buy request the order is placed. Focus on making the APIs secure through out the transaction.
