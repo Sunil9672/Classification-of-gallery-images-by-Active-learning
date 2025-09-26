@@ -1,0 +1,23 @@
+1. Ethical Hacker
+
+-> Computer Networking Skills
+-> Computer Skills
+-> Linux Skills
+-> Programming Skills
+-> Basic Hardware Knoweledge
+-> Reverse Engineering
+-> Cryptography Skills
+-> Database Skills
+
+
+2. Pseudo Web Developer
+
+-> HTML
+-> CSS
+-> JS
+-> nodeJS
+
+3. Pseudo Python Developer
+
+-> Python
+-> Machine Learning
