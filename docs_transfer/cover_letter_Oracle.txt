@@ -1,0 +1,21 @@
+Sunil Meena
+602, Mahaveer Sargam, Ghansoli
+Mumbai, Maharashtra, 324001
+Sunilmeena00t@gmail.com | 9672135908 | linkedin.com/in/sunil-meena/ | github.com/Sunil9672
+
+04-04-2025
+
+Dear Recruitment Team,
+
+I am writing to express my interest in the Software Developer position at Oracle. With a B.Tech. in Electrical Engineering from IIT Bombay and nearly four years of experience building scalable backend systems at Jio Platforms Limited, I bring strong capabilities in Java-based development, architectural optimization, and collaborative software design that align closely with Oracle’s mission of engineering innovative, reliable, and high-performance applications.
+
+At Jio, I’ve led the design, development, and deployment of distributed systems that process high-throughput data in real time. My work on Spark-based services resulted in a 50% improvement in TPS, while optimizations to our Elasticsearch and Redis stack reduced latency by over 30%. I’ve contributed significantly to the evolution of our system architecture—introducing modular microservices, efficient caching layers, and fault-tolerant messaging pipelines using Kafka. These changes have improved maintainability, scalability, and performance across the board.
+
+In addition to coding, I actively mentor junior developers, conduct code reviews, and help define internal best practices. I’ve also implemented enhancements to our ML inference pipeline—leveraging Ray Serve and RAGs for real-time performance, demonstrating my ability to work across the stack and adapt architecture to evolving product needs.
+
+I am drawn to Oracle’s reputation for engineering excellence and innovation in database technologies, cloud computing, and enterprise applications. I’m particularly excited about the opportunity to contribute to existing product evolution—designing and implementing improvements that respond to emerging customer and business demands while maintaining reliability at scale.
+
+Thank you for considering my application. I would be excited to bring my technical depth, proactive mindset, and collaborative spirit to Oracle’s development team and contribute to its continued success.
+
+Sincerely,
+Sunil Meena

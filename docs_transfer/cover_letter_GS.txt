@@ -1,0 +1,23 @@
+Sunil Meena
+602, Mahaveer Sargam, Ghansoli
+Mumbai, Maharashtra, 324001
+Sunilmeena00t@gmail.com | 9672135908 | linkedin.com/in/sunil-meena/ | github.com/Sunil9672
+
+04-04-2025
+
+Dear Recruitment Team,
+
+I am excited to apply for the Software Engineer position at Goldman Sachs. With a B.Tech. in Electrical Engineering from IIT Bombay and nearly four years of experience at Jio Platforms Limited, I bring strong expertise in building and deploying large-scale distributed systems using Java, Spark, Kafka, and other core technologies aligned with this role’s expectations.
+
+At Jio, I designed and deployed high-throughput, Java-based microservices that offloaded compute-heavy tasks to Apache Spark clusters—leading to a 50% improvement in user request throughput (TPS). I have hands-on experience managing real-time event pipelines using Kafka and optimizing them for fault tolerance and minimal latency. By applying multithreading and asynchronous programming in Java, I reduced average system latency by 40% and improved throughput by 20%.
+
+Additionally, I built and maintained Elasticsearch infrastructure processing 30GB-300GB of daily event traffic, implementing efficient shard strategies and in-memory caching with Redis to improve system responsiveness by 32%. This experience honed my skills in designing scalable, fault-resilient systems—critical for the performance and reliability standards expected in financial infrastructure.
+
+I’ve also worked on deep learning services such as SPAM SMS Detector  using optimized ONNX weights, Ray Serve, and LLMs with RAG-based architectures, giving me a well-rounded understanding of backend systems and intelligent service design.
+
+Goldman Sachs’ emphasis on resilient, scalable systems for large-scale event processing deeply resonates with my experience and technical mindset. I am particularly drawn to the opportunity to build core engineering products that power critical workflows across the firm, and I’m eager to contribute to a team known for its engineering excellence.
+
+Thank you for considering my application. I would welcome the chance to discuss how my background can contribute to the success of Goldman Sachs’ platform engineering initiatives.
+
+Sincerely,
+Sunil Meena
