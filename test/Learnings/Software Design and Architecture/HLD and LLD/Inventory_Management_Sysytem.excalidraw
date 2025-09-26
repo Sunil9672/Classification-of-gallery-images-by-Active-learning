@@ -1,0 +1,52 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "RfgPLKlwH8V5DKk2kdGkC",
+      "type": "text",
+      "x": 484.94830087398196,
+      "y": 183.9858960964352,
+      "width": 1072.9085693359375,
+      "height": 1535.8068152355042,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3E",
+      "roundness": null,
+      "seed": 758708105,
+      "version": 1957,
+      "versionNonce": 2041907706,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1755619362781,
+      "link": null,
+      "locked": false,
+      "text": "Inventory Management System:\n\nRequirements:\n\n1. CRUD for Products in System\n2. Track real-time quantity of products as they are added, sold and removed\n3. Reconciliation of Physical inventory counts with System records\n4. Product level alerting when quantity falls below certain threshold or products nearing expiry\n5. Allow users to create sales order and manage items in the inventory accordingly\n6. Allow user to create Purchase order and add items when the order arrives.\n7. For the above orders, the items should get marked inbound, outbound\n8. Role base access control over features\n\nNon-Functional req:\n\n1. User should always get a response\n2. Should be consistent when we are on to last few items\n3. Latency for requests should be under 2 Sec\n4. System should be able to handle 200 sales order / min \n5. System should be able to handle 10x to 100x scale increase\n\n\nQuantities:\nUser, Product, Order\n\n\nAPIs\n\nPUT /products\nHeades: JWT\n{\n    \"SKU\": \"\",\n    \"quantity\": \"\",\n    \"description\": \"\",\n    \"productType\": \"\",\n    \"price\": \"\",\n    \"expiryDate\": \"\"\n}\n\nPOST /products/{productId}\nHeades: JWT\n{\n    \"operation\": \"add/remove\",\n    \"quantity\": \"\",\n}\n\nGET /products/{product_id}&{query}\n\n\nPOST /orders\n\n\n",
+      "fontSize": 23.18198966393214,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Inventory Management System:\n\nRequirements:\n\n1. CRUD for Products in System\n2. Track real-time quantity of products as they are added, sold and removed\n3. Reconciliation of Physical inventory counts with System records\n4. Product level alerting when quantity falls below certain threshold or products nearing expiry\n5. Allow users to create sales order and manage items in the inventory accordingly\n6. Allow user to create Purchase order and add items when the order arrives.\n7. For the above orders, the items should get marked inbound, outbound\n8. Role base access control over features\n\nNon-Functional req:\n\n1. User should always get a response\n2. Should be consistent when we are on to last few items\n3. Latency for requests should be under 2 Sec\n4. System should be able to handle 200 sales order / min \n5. System should be able to handle 10x to 100x scale increase\n\n\nQuantities:\nUser, Product, Order\n\n\nAPIs\n\nPUT /products\nHeades: JWT\n{\n    \"SKU\": \"\",\n    \"quantity\": \"\",\n    \"description\": \"\",\n    \"productType\": \"\",\n    \"price\": \"\",\n    \"expiryDate\": \"\"\n}\n\nPOST /products/{productId}\nHeades: JWT\n{\n    \"operation\": \"add/remove\",\n    \"quantity\": \"\",\n}\n\nGET /products/{product_id}&{query}\n\n\nPOST /orders\n\n\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff",
+    "lockedMultiSelections": {}
+  },
+  "files": {}
+}
